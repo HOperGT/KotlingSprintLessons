@@ -1,7 +1,18 @@
 package org.example
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+fun f(N: Int): String {
+    if(N==0){
+        return "0"
+    }
+    var s = ""
+    var n = N
+
+    while(n>0){
+        s = (n % 17).toString() + s
+        n/=17
+    }
+    return s
+}
 fun main() {
     val name = "Kotlin"
     //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
@@ -13,6 +24,11 @@ fun main() {
             println("Четное i == $i")
             k += 1
         }
+    }
+
+
+    for(i in 1..100){
+        println(f(i))
     }
     println("$k")
 }
