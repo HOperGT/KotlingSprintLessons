@@ -11,6 +11,4 @@ fun main(){
     allStaffStore = 1999
 
     println(allStaffStore)
-
-
 }
